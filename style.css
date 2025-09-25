@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cossette+Texte:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -9,62 +9,141 @@
 
 
 body {
-    font-family: Poppins, sans-serif;
-    background-color: black;
+    font-family: Inter, sans-serif;
+    background: rgb(19, 19, 19);
+    min-height: 100vh;      
 }
 
 
 nav {
-
-    padding: 20px;
+    padding: 21px;
+    
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 10px;
 
 }
 
+nav ul li {
+    padding: 0 5px;
+    
+
+}
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: #ffffff;
     text-decoration: none;
+    border: 1px solid #575757;
+    background-color: rgb(25, 25, 25);
+    font-size: 1.3em;
+
     
-    font-size: 1.2em;
-    background-color: rgb(255, 255, 255);
-    padding: 15px;
-    border-radius: 5px;
-    font-weight: 600;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: 500;
     
     
+}
+
+nav ul li a:hover {
+    background-color: #2a2a2a;
+    transition: 0.1s;
+    cursor: pointer;
 }
 
 header h1 {
-    color: white;
+    background: linear-gradient(90deg, #3b82f6, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
+    padding-top: 25px;
+    text-shadow: 0 0 50px #8c10ff;
+
 }
 
 header p {
     color: white;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.4em;
+    line-height: 20px;
 
 }
 
-.container-title-1 {
+.roadmap-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    color: rgb(41, 41, 41);
-    background-color: rgb(246, 255, 127);
-    border-radius: 10px;
-    padding: 5px;
-    margin: 50px auto 0 auto; 
-    max-width: 100px;
+    width: 100%;
+    padding-top: 60px;
+    
+}
+
+.roadmap-path {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.roadmap-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(30, 20, 40);
+    border: 1px solid #8b5cf6;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 50px rgba(139, 92, 246, 0.3);
+}
+
+.card-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a855f7;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    color: rgb(234, 234, 234);
+}
+
+
+.roadmap-connector {
+    width: 3px;
+    height: 30px;
+    background-color: #8b5cf6;
+    margin: 0px auto;
+    
 }
 
 
 
+
+@media screen and (max-width: 768px) {
+    nav { 
+        overflow-x: auto; 
+    }
+    nav ul { 
+        min-width: max-content; 
+    }
+    
+    nav ul li a {
+         font-size: 1em;
+    }
+}
